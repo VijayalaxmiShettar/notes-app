@@ -41,7 +41,7 @@ const NavBar = (props)=>{
 
     const handleLogout = ()=>{
         const token = localStorage.getItem('token')
-        axios.delete('http://dct-user-auth.herokuapp.com/users/logout', {
+        axios.delete('https://dct-user-auth.herokuapp.com/users/logout', {
             headers:{
                 'x-auth': token
             }
