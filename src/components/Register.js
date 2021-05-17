@@ -27,7 +27,7 @@ const Register = (props)=>{
 
     const handleSubmit = (data)=>{
        
-        axios.post('http://dct-user-auth.herokuapp.com/users/register', data)
+        axios.post('https://dct-user-auth.herokuapp.com/users/register', data)
             .then((res)=>{
                 const response = res.data
                 if(Object.keys(response).includes('errors')){
