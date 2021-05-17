@@ -3,7 +3,7 @@ import swal from 'sweetalert'
 
 export const getUserDetails = (token)=>{
     return (dispatch)=>{
-        axios.get('http://dct-user-auth.herokuapp.com/users/account',{
+        axios.get('https://dct-user-auth.herokuapp.com/users/account',{
             headers:{
                 "x-auth": token
             }
