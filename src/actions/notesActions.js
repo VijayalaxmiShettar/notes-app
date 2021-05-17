@@ -3,7 +3,7 @@ import swal from 'sweetalert'
 
 export const getNotes = (token)=>{
     return (dispatch)=>{
-        axios.get('http://dct-user-auth.herokuapp.com/api/notes',{
+        axios.get('https://dct-user-auth.herokuapp.com/api/notes',{
             headers:{
                 'x-auth': token
             }
@@ -27,7 +27,7 @@ export const setNotesList = (data)=>{
 
 export const asyncAddNote = (token, data) =>{
     return (dispatch)=>{
-        axios.post('http://dct-user-auth.herokuapp.com/api/notes', data, {
+        axios.post('https://dct-user-auth.herokuapp.com/api/notes', data, {
             headers:{
                 'x-auth': token
             }
@@ -51,7 +51,7 @@ export const addNote = (data)=>{
 
 export const asyncDeleteNote = (token, id)=>{
     return (dispatch)=>{
-        axios.delete(`http://dct-user-auth.herokuapp.com/api/notes/${id}`, {
+        axios.delete(`https://dct-user-auth.herokuapp.com/api/notes/${id}`, {
             headers:{
                 'x-auth': token
             }
@@ -75,7 +75,7 @@ export const deleteNote = (data) => {
 
 export const asyncUpdateNote = (token, data, id) =>{
     return (dispatch, getState) =>{
-        axios.put(`http://dct-user-auth.herokuapp.com/api/notes/${id}`, data, {
+        axios.put(`https://dct-user-auth.herokuapp.com/api/notes/${id}`, data, {
             headers: {
                 'x-auth': token
             }
