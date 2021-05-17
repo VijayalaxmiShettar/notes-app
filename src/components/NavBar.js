@@ -34,7 +34,9 @@ const NavBar = (props)=>{
     
     useEffect(()=>{
         const token = localStorage.getItem('token')
-        dispatch(getUserDetails(token)) //either token = null or contains the token
+        if(token){
+            dispatch(getUserDetails(token))
+        }
     }, [])
 
     const handleLogout = ()=>{
